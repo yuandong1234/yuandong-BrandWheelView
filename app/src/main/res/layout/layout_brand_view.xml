@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_400dp">
+
+        <com.yuandong.brandviewdemo.widget.brandLooper.LoopViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_400dp"/>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_40dp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/looper_bottom_bg">
+
+            <!--<com.yuandong.brandviewdemo.widget.brandLooper.CircleIndicator-->
+                <!--android:id="@id/indicator"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="48dp"-->
+                <!--android:layout_gravity="right|center_vertical"-->
+                <!--android:layout_marginRight="@dimen/dimen_14dp"-->
+                <!--android:gravity="center"-->
+                <!--android:orientation="horizontal" />-->
+            <com.yuandong.brandviewdemo.widget.brandLooper.CircleIndicator
+                android:id="@id/indicator"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginRight="@dimen/dimen_14dp"
+                android:gravity="center"
+                app:ci_animator="@animator/indicator_no_animator"
+                app:ci_drawable_unselected="@drawable/black_radius_square"
+                app:ci_drawable="@drawable/white_radius_square"
+                android:orientation="horizontal" />
+        </FrameLayout>
+    </FrameLayout>
+</LinearLayout>
